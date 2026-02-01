@@ -1,0 +1,535 @@
+[gd_scene load_steps=18 format=4 uid="uid://bcaclhssh1rwt"]
+
+[ext_resource type="Texture2D" uid="uid://dd7ce8o4rk48s" path="res://assets/MossyCavern/Mossy Tileset/Mossy - BackgroundDecoration.png" id="1_jqcht"]
+[ext_resource type="Texture2D" uid="uid://c5siq7ek0ocgl" path="res://assets/MossyCavern/Mossy Tileset/Mossy - Hanging Plants.png" id="2_sjdff"]
+[ext_resource type="Texture2D" uid="uid://bnntyrcm7a2c4" path="res://assets/MossyCavern/Mossy Tileset/Mossy - Decorations&Hazards.png" id="3_gu3jw"]
+[ext_resource type="Texture2D" uid="uid://bq6fwqw8j0hww" path="res://assets/MossyCavern/Mossy Tileset/Mossy - TileSet.png" id="4_rust2"]
+[ext_resource type="PackedScene" uid="uid://dgah28i6ak2rk" path="res://scenes/player.tscn" id="5_aavfd"]
+[ext_resource type="PackedScene" uid="uid://b6hxqywnl3vgn" path="res://scenes/coin.tscn" id="6_tf3fn"]
+[ext_resource type="PackedScene" uid="uid://s6k1vfskpkqu" path="res://scenes/enemy.tscn" id="7_o8h0w"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ukxk"]
+texture = ExtResource("1_jqcht")
+margins = Vector2i(95, 0)
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kg06n"]
+tile_size = Vector2i(512, 512)
+sources/0 = SubResource("TileSetAtlasSource_0ukxk")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3bk7l"]
+texture = ExtResource("2_sjdff")
+margins = Vector2i(0, 295)
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_n6gww"]
+tile_size = Vector2i(512, 512)
+sources/0 = SubResource("TileSetAtlasSource_3bk7l")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqv1c"]
+texture = ExtResource("3_gu3jw")
+margins = Vector2i(32, 0)
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ydq7x"]
+tile_size = Vector2i(512, 512)
+sources/1 = SubResource("TileSetAtlasSource_vqv1c")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pndm0"]
+texture = ExtResource("4_rust2")
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -148.165, 256, -143.675, 256, 256, -256, 256)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -148.165, 256, -143.675, 256, 256, -256, 256)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -148.165, 256, -143.675, 256, 256, -256, 256)
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -256, 256, -256, 256, 256, -256, 256)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -256, 256, -256, 256, 256, -256, 256)
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -256, 256, -256, 256, 256, -256, 256)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -256, 256, -256, 256, 256, -256, 256)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -256, 256, -256, 256, 256, -256, 256)
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ie6b"]
+texture = ExtResource("1_jqcht")
+texture_region_size = Vector2i(512, 512)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_v = true
+0:0/1/transpose = true
+1:0/next_alternative_id = 2
+1:0/0 = 0
+1:0/1 = 1
+1:0/1/flip_v = true
+1:0/1/transpose = true
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/next_alternative_id = 2
+0:1/0 = 0
+0:1/1 = 1
+0:1/1/flip_v = true
+0:1/1/transpose = true
+1:1/next_alternative_id = 2
+1:1/0 = 0
+1:1/1 = 1
+1:1/1/flip_v = true
+1:1/1/transpose = true
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/next_alternative_id = 3
+0:2/0 = 0
+0:2/1 = 1
+0:2/1/flip_v = true
+0:2/1/transpose = true
+1:2/next_alternative_id = 2
+1:2/0 = 0
+1:2/1 = 1
+1:2/1/flip_v = true
+1:2/1/transpose = true
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/next_alternative_id = 2
+0:3/0 = 0
+0:3/1 = 1
+0:3/1/flip_v = true
+0:3/1/transpose = true
+1:3/next_alternative_id = 2
+1:3/0 = 0
+1:3/1 = 1
+1:3/1/flip_v = true
+1:3/1/transpose = true
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/next_alternative_id = 2
+0:4/0 = 0
+0:4/1 = 1
+0:4/1/flip_v = true
+0:4/1/transpose = true
+1:4/next_alternative_id = 2
+1:4/0 = 0
+1:4/1 = 1
+1:4/1/flip_v = true
+1:4/1/transpose = true
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/next_alternative_id = 2
+0:5/0 = 0
+0:5/1 = 1
+0:5/1/flip_v = true
+0:5/1/transpose = true
+1:5/next_alternative_id = 2
+1:5/0 = 0
+1:5/1 = 1
+1:5/1/flip_v = true
+1:5/1/transpose = true
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/next_alternative_id = 2
+0:6/0 = 0
+0:6/1 = 1
+0:6/1/flip_v = true
+0:6/1/transpose = true
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/next_alternative_id = 2
+0:7/0 = 0
+0:7/1 = 1
+0:7/1/flip_v = true
+0:7/1/transpose = true
+1:7/next_alternative_id = 2
+1:7/0 = 0
+1:7/1 = 1
+1:7/1/flip_v = true
+1:7/1/transpose = true
+2:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qsvdl"]
+tile_size = Vector2i(512, 512)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_pndm0")
+sources/3 = SubResource("TileSetAtlasSource_0ie6b")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhj2f"]
+size = Vector2(2809.26, 12.1598)
+
+[node name="Level 1" type="Node2D"]
+position = Vector2(-3, 24)
+
+[node name="Tilemaps" type="Node" parent="."]
+
+[node name="Background" type="TileMapLayer" parent="Tilemaps"]
+modulate = Color(1, 1, 1, 0.227451)
+tile_map_data = PackedByteArray("AAD3//3/AAACAAAAAAD3//7/AAACAAEAAAD3////AAACAAIAAAD3/wAAAAACAAMAAAD3/wEAAAACAAQAAAD4//3/AAADAAAAAAD4//7/AAADAAEAAAD4////AAADAAIAAAD4/wAAAAADAAMAAAD4/wEAAAADAAQAAAD5//3/AAAEAAAAAAD5//7/AAAEAAEAAAD5////AAAEAAIAAAD5/wAAAAAEAAMAAAD5/wEAAAAEAAQAAAD+//7/AAACAAAAAAD+////AAACAAEAAAD+/wAAAAACAAIAAAD+/wEAAAACAAMAAAD+/wIAAAACAAQAAAD///7/AAADAAAAAAD/////AAADAAEAAAD//wAAAAADAAIAAAD//wEAAAADAAMAAAD//wIAAAADAAQAAAAAAP7/AAAEAAAAAAAAAP//AAAEAAEAAAAAAAAAAAAEAAIAAAAAAAEAAAAEAAMAAAAAAAIAAAAEAAQAAAAHAP3/AAACAAAAAAAHAP7/AAACAAEAAAAHAP//AAACAAIAAAAHAAAAAAACAAMAAAAHAAEAAAACAAQAAAAIAP3/AAADAAAAAAAIAP7/AAADAAEAAAAIAP//AAADAAIAAAAIAAAAAAADAAMAAAAIAAEAAAADAAQAAAAJAP3/AAAEAAAAAAAJAP7/AAAEAAEAAAAJAP//AAAEAAIAAAAJAAAAAAAEAAMAAAAJAAEAAAAEAAQAAAAKAP7/AAACAAAAAAAKAP//AAACAAEAAAAKAAAAAAACAAIAAAAKAAEAAAACAAMAAAAKAAIAAAACAAQAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAALAAAAAAADAAIAAAALAAEAAAADAAMAAAALAAIAAAADAAQAAAAMAP7/AAAEAAAAAAAMAP//AAAEAAEAAAAMAAAAAAAEAAIAAAAMAAEAAAAEAAMAAAAMAAIAAAAEAAQAAAASAP3/AAACAAAAAAASAP7/AAACAAEAAAASAP//AAACAAIAAAASAAAAAAACAAMAAAASAAEAAAACAAQAAAATAP3/AAADAAAAAAATAP7/AAADAAEAAAATAP//AAADAAIAAAATAAAAAAADAAMAAAATAAEAAAADAAQAAAAUAP3/AAAEAAAAAAAUAP7/AAAEAAEAAAAUAP//AAAEAAIAAAAUAAAAAAAEAAMAAAAUAAEAAAAEAAQAAAAcAP7/AAACAAAAAAAcAP//AAACAAEAAAAcAAAAAAACAAIAAAAcAAEAAAACAAMAAAAcAAIAAAACAAQAAAAdAP7/AAADAAAAAAAdAP//AAADAAEAAAAdAAAAAAADAAIAAAAdAAEAAAADAAMAAAAdAAIAAAADAAQAAAAeAP7/AAAEAAAAAAAeAP//AAAEAAEAAAAeAAAAAAAEAAIAAAAeAAEAAAAEAAMAAAAeAAIAAAAEAAQAAAAPAP3/AAACAAAAAAAPAP7/AAACAAEAAAAPAP//AAACAAIAAAAPAAAAAAACAAMAAAAPAAEAAAACAAQAAAAQAP3/AAADAAAAAAAQAP7/AAADAAEAAAAQAP//AAADAAIAAAAQAAAAAAADAAMAAAAQAAEAAAADAAQAAAARAP3/AAAEAAAAAAARAP7/AAAEAAEAAAARAP//AAAEAAIAAAARAAAAAAAEAAMAAAARAAEAAAAEAAQAAAA=")
+tile_set = SubResource("TileSet_kg06n")
+
+[node name="Hangin Plants" type="TileMapLayer" parent="Tilemaps"]
+tile_map_data = PackedByteArray("AAD1//3/AAAAAAIAAAD1//7/AAAAAAMAAAD1////AAAAAAQAAAD8//3/AAAAAAIAAAD8//7/AAAAAAMAAAD8////AAAAAAQAAAACAP3/AAAAAAIAAAACAP7/AAAAAAMAAAACAP//AAAAAAQAAAAHAP3/AAAAAAIAAAAHAP7/AAAAAAMAAAAHAP//AAAAAAQAAAAOAP3/AAAAAAIAAAAOAP7/AAAAAAMAAAAOAP//AAAAAAQAAAATAP3/AAAAAAIAAAATAP7/AAAAAAMAAAATAP//AAAAAAQAAAAgAP3/AAAAAAIAAAAgAP7/AAAAAAMAAAAgAP//AAAAAAQAAAAeAP3/AAAAAAIAAAAeAP7/AAAAAAMAAAAeAP//AAAAAAQAAAAYAP3/AAAAAAIAAAAYAP7/AAAAAAMAAAAYAP//AAAAAAQAAAD2//7/AAAAAAAAAAD2////AAAAAAEAAAD6//7/AAAAAAAAAAD6////AAAAAAEAAAAFAP7/AAAAAAAAAAAFAP//AAAAAAEAAAALAP7/AAAAAAAAAAALAP//AAAAAAEAAAAdAP7/AAAAAAAAAAAdAP//AAAAAAEAAAAUAP7/AAAAAAAAAAAUAP//AAAAAAEAAAABAP7/AAAAAAAAAAABAP//AAAAAAEAAAA=")
+tile_set = SubResource("TileSet_n6gww")
+
+[node name="Plants" type="TileMapLayer" parent="Tilemaps"]
+position = Vector2(0, 179)
+tile_map_data = PackedByteArray("AAD5////AQADAAYAAAD/////AQADAAYAAAAIAP//AQACAAUAAAAMAP//AQAAAAYAAAABAP//AQABAAcAAAAGAP//AQACAAcAAAARAP//AQAAAAcAAAD9////AQABAAUAAAD3////AQADAAcAAAAQAP//AQADAAYAAAAcAP//AQADAAYAAAAVAP//AQAAAAcAAAAZAP//AQACAAUAAAAfAP//AQAAAAYAAAA=")
+tile_set = SubResource("TileSet_ydq7x")
+
+[node name="Ground" type="TileMapLayer" parent="Tilemaps"]
+z_index = 11
+position = Vector2(1, 1)
+tile_map_data = PackedByteArray("AAD2/wAAAAAAAAAAAAD3/wAAAAABAAAAAAD4/wAAAAABAAAAAAD5/wAAAAABAAAAAAD6/wAAAAABAAAAAAD7/wAAAAABAAAAAAD8/wAAAAABAAAAAAD9/wAAAAABAAAAAAD+/wAAAAABAAAAAAD//wAAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAIAAAAAAABAAAAAAAJAAAAAAACAAAAAAAJAAEAAAACAAEAAAD2/wEAAAAAAAEAAAD2/wIAAAAAAAIAAAD3/wIAAAABAAIAAAD4/wIAAAABAAIAAAD5/wIAAAABAAIAAAD6/wIAAAABAAIAAAD7/wIAAAABAAIAAAD8/wIAAAABAAIAAAD9/wIAAAABAAIAAAD+/wIAAAABAAIAAAD//wIAAAABAAIAAAAAAAIAAAABAAIAAAABAAIAAAABAAIAAAACAAIAAAABAAIAAAADAAIAAAABAAIAAAAEAAIAAAABAAIAAAAFAAIAAAABAAIAAAAGAAIAAAABAAIAAAAHAAIAAAABAAIAAAAIAAIAAAABAAIAAAAJAAIAAAACAAIAAAD3/wEAAAABAAEAAAD4/wEAAAABAAEAAAD5/wEAAAABAAEAAAD6/wEAAAABAAEAAAD7/wEAAAABAAEAAAD8/wEAAAABAAEAAAD9/wEAAAABAAEAAAD+/wEAAAABAAEAAAD//wEAAAABAAEAAAAAAAEAAAABAAEAAAABAAEAAAABAAEAAAACAAEAAAABAAEAAAADAAEAAAABAAEAAAAEAAEAAAABAAEAAAAFAAEAAAABAAEAAAAGAAEAAAABAAEAAAAHAAEAAAABAAEAAAAIAAEAAAABAAEAAAALAAAAAAAAAAAAAAALAAEAAAAAAAEAAAALAAIAAAAAAAIAAAAMAAAAAAABAAAAAAAMAAEAAAABAAEAAAAMAAIAAAABAAIAAAANAAAAAAACAAAAAAANAAEAAAACAAEAAAANAAIAAAACAAIAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAEAAAAPAAIAAAAAAAIAAAAQAAAAAAABAAAAAAAQAAEAAAABAAEAAAAQAAIAAAABAAIAAAARAAAAAAACAAAAAAARAAEAAAACAAEAAAARAAIAAAACAAIAAAATAAAAAAAAAAAAAAATAAEAAAAAAAEAAAATAAIAAAAAAAIAAAAUAAAAAAABAAAAAAAUAAEAAAABAAEAAAAUAAIAAAABAAIAAAAVAAAAAAACAAAAAAAVAAEAAAACAAEAAAAVAAIAAAACAAIAAAAXAAAAAAAAAAAAAAAYAAAAAAABAAAAAAAZAAAAAAABAAAAAAAaAAAAAAABAAAAAAAbAAAAAAABAAAAAAAcAAAAAAABAAAAAAAdAAAAAAABAAAAAAAeAAAAAAABAAAAAAAfAAAAAAACAAAAAAAfAAEAAAACAAEAAAAfAAIAAAACAAIAAAAeAAIAAAABAAIAAAAdAAIAAAABAAIAAAAcAAIAAAABAAIAAAAbAAIAAAABAAIAAAAaAAIAAAABAAIAAAAZAAIAAAABAAIAAAAYAAIAAAABAAIAAAAXAAIAAAAAAAIAAAAXAAEAAAAAAAEAAAAYAAEAAAABAAEAAAAZAAEAAAABAAEAAAAaAAEAAAABAAEAAAAbAAEAAAABAAEAAAAcAAEAAAABAAEAAAAdAAEAAAABAAEAAAAeAAEAAAABAAEAAAD1//7/AwAAAAAAAQD2//7/AwAAAAEAAQD3//7/AwAAAAIAAQD4//7/AwAAAAMAAQD5//7/AwAAAAQAAQD6//7/AwAAAAUAAQD7//7/AwAAAAYAAQD8//7/AwAAAAEAAQD9//7/AwAAAAIAAQD+//7/AwAAAAMAAQD///7/AwAAAAQAAQAAAP7/AwAAAAUAAQABAP7/AwAAAAYAAQACAP7/AwAAAAQAAQADAP7/AwAAAAQAAQAEAP7/AwAAAAUAAQAFAP7/AwAAAAYAAQAGAP7/AwAAAAQAAQAHAP7/AwAAAAUAAQAIAP7/AwAAAAEAAQAJAP7/AwAAAAIAAQAKAP7/AwAAAAMAAQALAP7/AwAAAAQAAQAMAP7/AwAAAAUAAQANAP7/AwAAAAYAAQAOAP7/AwAAAAMAAQAPAP7/AwAAAAEAAQAQAP7/AwAAAAIAAQARAP7/AwAAAAMAAQASAP7/AwAAAAQAAQATAP7/AwAAAAUAAQAUAP7/AwAAAAYAAQAVAP7/AwAAAAEAAQAWAP7/AwAAAAIAAQAXAP7/AwAAAAMAAQAYAP7/AwAAAAQAAQAZAP7/AwAAAAUAAQAaAP7/AwAAAAYAAQAbAP7/AwAAAAQAAQAcAP7/AwAAAAUAAQAdAP7/AwAAAAYAAQAeAP7/AwAAAAMAAQAfAP7/AwAAAAEAAQAgAP7/AwAAAAIAAQAhAP7/AwAAAAcAAQD1//3/AwABAAAAAQD2//3/AwABAAMAAQD3//3/AwABAAMAAQD4//3/AwABAAMAAQD5//3/AwABAAMAAQD6//3/AwABAAMAAQD7//3/AwABAAMAAQD8//3/AwABAAMAAQD9//3/AwABAAMAAQD+//3/AwABAAMAAQD///3/AwABAAMAAQAAAP3/AwABAAMAAQABAP3/AwABAAMAAQACAP3/AwABAAMAAQADAP3/AwABAAMAAQAEAP3/AwABAAMAAQAFAP3/AwABAAMAAQAGAP3/AwABAAMAAQAHAP3/AwABAAMAAQAIAP3/AwABAAMAAQAJAP3/AwABAAMAAQAKAP3/AwABAAMAAQALAP3/AwABAAMAAQAMAP3/AwABAAMAAQANAP3/AwABAAMAAQAOAP3/AwABAAMAAQAPAP3/AwABAAMAAQAQAP3/AwABAAMAAQARAP3/AwABAAMAAQASAP3/AwABAAMAAQATAP3/AwABAAMAAQAUAP3/AwABAAMAAQAVAP3/AwABAAMAAQAWAP3/AwABAAMAAQAXAP3/AwABAAMAAQAYAP3/AwABAAMAAQAZAP3/AwABAAMAAQAaAP3/AwABAAMAAQAbAP3/AwABAAMAAQAcAP3/AwABAAMAAQAdAP3/AwABAAMAAQAeAP3/AwABAAMAAQAfAP3/AwABAAMAAQAgAP3/AwABAAMAAQAhAP3/AwABAAcAAQA=")
+tile_set = SubResource("TileSet_qsvdl")
+
+[node name="Player" parent="Tilemaps" groups=["Player"] instance=ExtResource("5_aavfd")]
+position = Vector2(-4030, -74)
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(259, -97)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(1266, -103)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(1380, -103)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(1498, -103)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(4859, -376)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(4973, -376)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(5091, -376)
+
+[node name="Coin20" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(10414, -161)
+
+[node name="Coin21" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(13622, -121)
+
+[node name="Coin22" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(13740, -121)
+
+[node name="Coin29" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(10414, -161)
+
+[node name="Coin30" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(13622, -121)
+
+[node name="Coin31" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(13740, -121)
+
+[node name="Coin26" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(13259, -127)
+
+[node name="Coin32" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(15308, -217)
+
+[node name="Coin33" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(15426, -217)
+
+[node name="Coin34" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(14945, -223)
+
+[node name="Coin27" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(13373, -127)
+
+[node name="Coin28" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(13491, -127)
+
+[node name="Coin23" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(11653, -348)
+
+[node name="Coin24" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(11767, -348)
+
+[node name="Coin25" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(11885, -348)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(135, -100)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(20, -100)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(259, -97)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(6793, -145)
+
+[node name="Coin15" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(6678, -145)
+
+[node name="Coin19" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(7934, -309)
+
+[node name="Coin17" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(9367, -309)
+
+[node name="Coin18" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(9252, -309)
+
+[node name="Coin16" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(6917, -142)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(2380, -100)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(2265, -100)
+
+[node name="Coin36" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(-2427, -256)
+
+[node name="Coin37" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(-2542, -256)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(-567, -100)
+
+[node name="Coin35" parent="Coins" instance=ExtResource("6_tf3fn")]
+position = Vector2(-567, -100)
+
+[node name="Enemy" parent="Coins" instance=ExtResource("7_o8h0w")]
+position = Vector2(-2151, -26)
+
+[node name="DeathArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea"]
+position = Vector2(5837, 1078)
+scale = Vector2(10.1743, 30.3389)
+shape = SubResource("RectangleShape2D_dhj2f")
+
+[node name="RespawnPoint" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-4251, -33)
+
+[connection signal="body_entered" from="DeathArea" to="Tilemaps/Player" method="_on_death_area_body_entered"]
