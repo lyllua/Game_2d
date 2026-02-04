@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgait26aoj72x"]
+
+[sub_resource type="Gradient" id="Gradient_x0mop"]
+offsets = PackedFloat32Array(0.107477, 0.200935, 0.327103, 0.504673, 0.686916, 0.995327)
+colors = PackedColorArray(0.991478, 0.948388, 0.956589, 1, 0.757526, 0.267432, 0.871431, 1, 0.0806869, 0.606187, 0.908053, 1, 0.797715, 0.30543, 0.897411, 1, 0.47451, 0.0980392, 0.662745, 1, 0.6, 0.6, 0.6, 0)
+
+[node name="Magic" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 2000
+lifetime = 0.3
+speed_scale = 0.35
+randomness = 0.86
+emission_shape = 1
+emission_sphere_radius = 86.0
+spread = 21.0
+gravity = Vector2(-3000, 0)
+angular_velocity_min = -515.0
+linear_accel_max = 60.0
+scale_amount_max = 11.0
+color = Color(0.352941, 0.313726, 1, 1)
+color_ramp = SubResource("Gradient_x0mop")
+hue_variation_min = -0.52
+hue_variation_max = 0.68

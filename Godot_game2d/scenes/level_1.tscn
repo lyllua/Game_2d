@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=4 uid="uid://bcaclhssh1rwt"]
+[gd_scene load_steps=19 format=4 uid="uid://bcaclhssh1rwt"]
 
 [ext_resource type="Texture2D" uid="uid://dd7ce8o4rk48s" path="res://assets/MossyCavern/Mossy Tileset/Mossy - BackgroundDecoration.png" id="1_jqcht"]
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_npeu6"]
 [ext_resource type="Texture2D" uid="uid://c5siq7ek0ocgl" path="res://assets/MossyCavern/Mossy Tileset/Mossy - Hanging Plants.png" id="2_sjdff"]
 [ext_resource type="Texture2D" uid="uid://bnntyrcm7a2c4" path="res://assets/MossyCavern/Mossy Tileset/Mossy - Decorations&Hazards.png" id="3_gu3jw"]
 [ext_resource type="Texture2D" uid="uid://bq6fwqw8j0hww" path="res://assets/MossyCavern/Mossy Tileset/Mossy - TileSet.png" id="4_rust2"]
@@ -379,6 +380,7 @@ size = Vector2(2809.26, 12.1598)
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(-3, 24)
+script = ExtResource("1_npeu6")
 
 [node name="Tilemaps" type="Node" parent="."]
 
@@ -518,9 +520,6 @@ position = Vector2(-567, -100)
 [node name="Coin35" parent="Coins" instance=ExtResource("6_tf3fn")]
 position = Vector2(-567, -100)
 
-[node name="Enemy" parent="Coins" instance=ExtResource("7_o8h0w")]
-position = Vector2(-2151, -26)
-
 [node name="DeathArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea"]
@@ -531,5 +530,17 @@ shape = SubResource("RectangleShape2D_dhj2f")
 [node name="RespawnPoint" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-4251, -33)
+
+[node name="Enemy" parent="." instance=ExtResource("7_o8h0w")]
+position = Vector2(-2142, -58)
+
+[node name="Enemy2" parent="." instance=ExtResource("7_o8h0w")]
+position = Vector2(6354, -55)
+
+[node name="Enemy3" parent="." instance=ExtResource("7_o8h0w")]
+position = Vector2(14037, -45)
+
+[node name="Enemy4" parent="." instance=ExtResource("7_o8h0w")]
+position = Vector2(8773, -45)
 
 [connection signal="body_entered" from="DeathArea" to="Tilemaps/Player" method="_on_death_area_body_entered"]

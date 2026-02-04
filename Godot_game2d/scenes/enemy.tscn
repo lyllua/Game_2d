@@ -133,7 +133,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_070yx"]
 radius = 89.1403
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 9
+collision_mask = 9
 script = ExtResource("1_swvgv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -143,7 +145,7 @@ frame_progress = 0.0162032
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(8, 28)

@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://c18pf588lxcpw"]
+
+[ext_resource type="PackedScene" uid="uid://dgait26aoj72x" path="res://scenes/magic.tscn" id="1_aentq"]
+[ext_resource type="Script" path="res://scripts/magic_area.gd" id="1_gdwp2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tew7q"]
+radius = 85.5862
+
+[sub_resource type="GDScript" id="GDScript_po2cp"]
+script/source = "extends Timer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="MagicArea" type="Area2D"]
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("1_gdwp2")
+
+[node name="Magic" parent="." instance=ExtResource("1_aentq")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-28, 2)
+shape = SubResource("CircleShape2D_tew7q")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+script = SubResource("GDScript_po2cp")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
